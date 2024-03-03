@@ -11,6 +11,7 @@ screen_width, screen_height = pyautogui.size()
 
 thumb_x, thumb_y = 0, 0
 index_x, index_y = 0, 0
+dragging = False
 
 while True:
     _, frame = cap.read()
@@ -51,13 +52,20 @@ while True:
                         pyautogui.click()
                         pyautogui.sleep(1)
                     elif thumb_index_distance < move_threshold:
-                        pyautogui.moveTo(index_x, index_y)
+                        if dragging:
+                            pyautogui.dragTo(index_x, index_y)
+                        else:
+                            pyautogui.moveTo(index_x, index_y)
 
     cv2.imshow('Virtual Mouse', frame)
 
     key = cv2.waitKey(1) & 0xFF
     if key == ord('q'):
         break
+    elif key == ord('d'):
+        dragging = True
+    elif key == ord('r'):
+        dragging = False
 
 cap.release()
 cv2.destroyAllWindows()
