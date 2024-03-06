@@ -15,7 +15,7 @@ This script allows you to control your computer's mouse cursor using hand gestur
 ## Installation
 
 1. Make sure you have Python installed on your system.
-2. Install the required dependencies using pip: `pip install opencv-python mediapipe pyautogui`
+2. Install the required dependencies using pip: `pip install opencv-python` `pip install mediapipe` `pip install pyautogui`
    
 ## Usage
 
