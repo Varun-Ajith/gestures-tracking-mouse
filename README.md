@@ -1,10 +1,12 @@
-# Hand Tracking Mouse
+# Gesture Tracking Mouse
 
-This Python script utilizes computer vision techniques and the MediaPipe library to create a virtual mouse control system using hand gestures captured through a webcam.
+This Python scripts utilizes computer vision techniques and the MediaPipe library to create a virtual mouse control system using hand gestures and eye movement captured through a webcam.
 
 ## Overview
 
-This script allows you to control your computer's mouse cursor using hand gestures captured from the webcam. By tracking the position of your thumb and index finger, it enables actions like clicking, moving the cursor, and dragging objects on the screen.
+This script allows me to control your computer's mouse cursor using hand gestures and eye movement captured from the webcam. 
+Incase of hand tracking, tracking the position of my thumb and index finger, it enables actions like clicking, moving the cursor, and dragging objects on the screen.
+Incase of eye tracking, tracking the position of right eye to enable actions like moving cursor and left eye to click.
 
 ## Dependencies
 
@@ -15,15 +17,24 @@ This script allows you to control your computer's mouse cursor using hand gestur
 ## Installation
 
 1. Make sure you have Python installed on your system.
-2. Install the required dependencies using pip: `pip install opencv-python` `pip install mediapipe` `pip install pyautogui`
+2. Install the required dependencies using pip:
+ ```
+pip install opencv-python
+pip install mediapipe
+pip install pyautogui
+```
    
 ## Usage
 
 1. Clone this repository to your local machine.
 2. Open a terminal or command prompt.
 3. Navigate to the directory containing the script.
-4. Run the script using Python: `python Hand-tracking-mouse.py`
-5. 5. Adjust your hand in front of the webcam to control the mouse cursor.
+4. Run the script using Python:
+   ```
+   python Hand-tracking-mouse.py
+   python eyetracking.py
+   ```
+5. Adjust your hand or eye in front of the webcam to control the mouse cursor. 
 6. Use the following keyboard commands while the script is running:
 - Press 'q' to quit the application.
 - Press 'd' to toggle dragging mode.
